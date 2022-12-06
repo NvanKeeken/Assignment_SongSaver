@@ -30,6 +30,7 @@ class SongOverview extends Component {
 handleSubmit(e, song){
 e.preventDefault()
 this.addSong(song)
+e.target.reset()
 
 }
   render(){
