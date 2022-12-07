@@ -19,6 +19,7 @@ class SongOverview extends Component {
     }
    this.addSong = this.addSong.bind(this);
    this.handleSubmit= this.handleSubmit.bind(this)
+   this.removeSong= this.removeSong.bind(this)
   }
 
  addSong = (song) => {
@@ -32,6 +33,10 @@ e.preventDefault()
 this.addSong(song)
 e.target.reset()
 
+}
+
+removeSong (id){
+ this.setState({songs: this.state.songs.filter(song=> song.id ===! id)} )
 }
   render(){
    
@@ -47,7 +52,7 @@ e.target.reset()
                                 <th className="song-row__item">Rating</th>
                               </tr>
           </thead>
-          <SongList songs={this.state.songs} />
+          <SongList songs={this.state.songs} removeSong={this.removeSong} />
         </table>  
              {console.log(this.state.songs)}                   
       </div>
