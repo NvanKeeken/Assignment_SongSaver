@@ -36,7 +36,8 @@ e.target.reset()
 }
 
 removeSong (id){
- this.setState({songs: this.state.songs.filter(song=> song.id ===! id)} )
+  console.log(id)
+ this.setState({songs: this.state.songs.filter((song)=> { console.log(song); return song.id !== id})} )
 }
   render(){
    
