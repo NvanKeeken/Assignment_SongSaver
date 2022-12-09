@@ -9,7 +9,7 @@ function ListItem (props){
             <td>{props.song.artist}</td>
             <td>{props.song.genre}</td>
             <td>{props.song.rating}</td>
-            <td><button onClick={(e)=>props.removeSong(props.song.id)}>Delete</button></td>
+            <td ><button  className="delete-button" onClick={(e)=>props.removeSong(props.song.id)}>Delete</button></td>
         </tr>
         
     )

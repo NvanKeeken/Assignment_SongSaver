@@ -2,7 +2,7 @@ import React from "react"
 
 function SubmitButton (props){
 return (
-    <button type="submit">Add Song</button>
+    <button className="song-form__button" type="submit">Add Song</button>
 )
 }
 
