@@ -6,7 +6,7 @@ function SongList (props){
 return(
    <tbody>
    {props.songs.map(song=>{
-    return <ListItem song={song} key={song.id}/>
+    return <ListItem song={song} key={song.id} removeSong={props.removeSong}/>
    })}
    </tbody>
   
