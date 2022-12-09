@@ -1,5 +1,6 @@
 import React from "react";
 
+// return dropdown menu for sorting songs by rating 
 function SortRating(props) {
   return (
     <select className="song-sort" onChange={(e) => props.sortRating(e)}>

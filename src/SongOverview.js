@@ -1,8 +1,8 @@
 //imports
 import React, { Component } from "react";
 import SongForm from "./components/SongForm";
-import SortSection from "./components/SortTitle";
-import SortRating from "./components/SortRating";
+import SortSection from "./components/sort-components/SortTitle";
+import SortRating from "./components/sort-components/SortRating";
 import SongTable from "./components/SongTable";
 
 // This container component handles the buisiness side of the application
@@ -63,7 +63,9 @@ class SongOverview extends Component {
     e.target.reset();
   };
 
-  // This function filters out the song with passed id when delete button is clicked
+  // Additional functions
+
+  // This function filters out the song with passed id when delete button is clicked (1 point)
   removeSong = (id) => {
     this.setState((preState) => ({
       songs: preState.songs
@@ -74,7 +76,7 @@ class SongOverview extends Component {
     }));
   };
 
-  // This function sorts the song titles a-z or z-a depending on the selected option
+  // This function sorts the song titles a-z or z-a depending on the selected option (0.5 point)
   sortSongTitle = (e) => {
     const songAscending = [...this.state.songs].sort((a, b) =>
       a.title > b.title ? 1 : -1
@@ -87,7 +89,7 @@ class SongOverview extends Component {
       : this.setState({ songs: songDescending });
   };
 
-  // This fuction sorts the song rating 1-5 or 5-1 depending on the selected option
+  // This fuction sorts the song rating 1-5 or 5-1 depending on the selected option (0.5 point)
   sortSongRating = (e) => {
     const ratingAscending = [...this.state.songs].sort(
       (a, b) => a.rating - b.rating

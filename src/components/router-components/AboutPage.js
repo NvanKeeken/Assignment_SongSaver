@@ -1,6 +1,7 @@
 import React from "react";
 import NavBar from "./NavBar";
 
+// returns content off the about page with nav-bar at the top
 function AboutPage() {
   return (
     <div>
@@ -21,6 +22,8 @@ function AboutPage() {
           number assigned to them, that should make a total of tree points. I
           choose to add delete buttons to remove a song from my playlist (1
           point) and add a navigation bar with React Routing (2 points).
+          Additionally I added two sorting functions (1 point) to spread my
+          chances to pass this assignment and challenge myself.
         </p>
       </div>
     </div>

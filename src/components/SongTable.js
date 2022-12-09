@@ -1,6 +1,7 @@
 import React from "react"
 import SongList from "./SongList"
-
+ 
+// forms the container for the whole table that forms the playlist 
 function SongTable (props){
     return(
 <table style={{ width: "100%" }} className="playlist">
@@ -13,7 +14,7 @@ function SongTable (props){
               <th className="song-row__item">Delete</th>
             </tr>
           </thead>
-          <SongList songs={props.songs} removeSong={props.removeSong} />
+          <SongList songs={props.songs} removeSong={props.removeSong} /> 
         </table>
     )
 }
