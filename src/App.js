@@ -1,12 +1,13 @@
 
 import './App.css';
-import SongOverview from "./SongOverview"
+import AppRouter from './components/AppRouter';
+
 
 function App() {
   return (
     <div className="App">
-     <h1>Hello world</h1> 
-     <SongOverview/>
+      <AppRouter/>
+    
     </div>
   );
 }
