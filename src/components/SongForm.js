@@ -1,8 +1,10 @@
 import SubmitButton from "./SubmitButton";
 
-// form to add song to playlist
+// Form to add song to playlist
+
 function SongForm(props) {
-// value of input and select element is passed to this variable, and the newSong is passed to state when submit button is clicked
+    
+// Value of input and select element is passed to this variable, and the newSong is passed to state when submit button is clicked
   const newSong = {
     title: "",
     artist: "",
