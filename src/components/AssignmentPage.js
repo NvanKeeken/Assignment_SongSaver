@@ -6,6 +6,7 @@ function AssignmentPage (){
     return (
         <div>
          <NavBar/>
+         <header><h1> Winc playlist</h1></header>
          <SongOverview/>
         </div>
     )
