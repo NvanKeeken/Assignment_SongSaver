@@ -5,7 +5,7 @@ import SortSection from "./components/sort-components/SortTitle";
 import SortRating from "./components/sort-components/SortRating";
 import SongTable from "./components/SongTable";
 
-// This container component handles the buisiness side of the application
+// This container class component handles the buisiness side of the application
 class SongOverview extends Component {
   // Initial state
   constructor() {
@@ -15,23 +15,44 @@ class SongOverview extends Component {
         {
           title: "Video Games",
           artist: "Lana del Rey",
-          genre: "Pop",
-          rating: "3",
+          genre: "pop",
+          rating: "2",
           id: 1,
         },
         {
           title: "Hurt",
           artist: "Johnny Cash",
-          genre: "Pop",
-          rating: "4",
+          genre: "country",
+          rating: "5",
           id: 2,
         },
         {
-          title: "Feeling Good",
+          title: "Sinnerman",
           artist: "Nina Simone",
-          genre: "Jazz",
+          genre: "jazz",
           rating: "4",
           id: 3,
+        },
+        {
+          title: "California Dreamin",
+          artist: "The Mama & The Papas",
+          genre: "pop",
+          rating: "4",
+          id: 4,
+        },
+        {
+          title: "BTSTU",
+          artist: "Jai Paul",
+          genre: "electronic",
+          rating: "2",
+          id: 5,
+        },
+        {
+          title: "Where Did You Sleep Last Night",
+          artist: "Nirvana",
+          genre: "rock",
+          rating: "3",
+          id: 6,
         },
       ],
     };
@@ -42,7 +63,7 @@ class SongOverview extends Component {
     this.sortSongRating = this.sortSongRating.bind(this);
   }
 
-  // This functions check if the input fields are filled in and sets song, passed by handleSubmit function , to state
+  // This functions checks if the input fields are filled in and sets the song passed by handleSubmit function , to state.
   addSong = (song) => {
     if (
       song.title === "" ||
@@ -56,7 +77,7 @@ class SongOverview extends Component {
     }
   };
 
-  // This function is fired when "Add song" button is clicked, it passes the song to addSong function and empties the input fields aftwerwards
+  // This function is fired when "Add song" button is clicked, it passes the song to addSong function and empties the input fields afterwards
   handleSubmit = (e, song) => {
     e.preventDefault();
     this.addSong(song);
@@ -105,13 +126,13 @@ class SongOverview extends Component {
   render() {
     return (
       <div className="songSaver-container">
-        <SongForm
+        <SongForm                                
           addSong={this.addSong}
           submit={this.handleSubmit}
           songs={this.state.songs}
         />
 
-        <div className="sort-container">
+        <div className="sort-container">        
           <SortSection
             sortTitle={this.sortSongTitle}
             sortRating={this.sortSongRating}

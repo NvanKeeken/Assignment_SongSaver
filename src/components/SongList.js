@@ -1,7 +1,7 @@
 import React from "react"
 import ListItem from "./ListItem"
 
-// this function return for every song in state a <tr> element and adds it to table body 
+// this function return  <tr> element for every song in state and adds it to table body 
 function SongList (props){
     
 return(

@@ -1,7 +1,7 @@
 import React from "react"
 import SongList from "./SongList"
  
-// forms the container for the whole table that forms the playlist 
+// The container for the whole table that forms the playlist 
 function SongTable (props){
     return(
 <table style={{ width: "100%" }} className="playlist">
